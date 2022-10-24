@@ -6,25 +6,28 @@ import View
 def main_menu():
     while True:
         print('\nГлавное меню:')
-        print('1. Добавить контакт')
-        print('2. Удалить контакт')
-        print('3. Изменить контакт')
-        print('4. Поиск контакта')
-        print('8. Сохранить файл')
+        print('1. Показать все контакты')
+        print('2. Добавить контакт')
+        print('3. Удалить контакт')
+        print('4. Изменить контакт')
+        print('5. Поиск контакта')
+        print('6. Сохранить файл')
         print('0. Выйти из программы')
         choice = int(input('Выберите пункт: '))
         if choice == 1:
+            View.printPhoneBook()
+        if choice == 2:
             add_contact()
             print('\nКонтакт добавлен\n')
-        if choice == 2:
+        if choice == 3:
             remove_contact()
             print('\nКонтакт удален\n')
-        if choice == 3:
-            change_contact()
         if choice == 4:
+            change_contact()
+        if choice == 5:
 
             find_contact()
-        if choice == 8:
+        if choice == 6:
             save_file()
             print('\nФайл сохранен!\n')
         if choice == 0:
